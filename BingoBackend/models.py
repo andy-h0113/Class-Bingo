@@ -16,6 +16,7 @@ class User(models.Model):
     username = models.CharField(max_length=20)
     password = models.CharField(max_length=200)
     num_wins = models.IntegerField(default=0)
+    section_num = models.IntegerField(default=0)
 
 
 class Tile(models.Model):

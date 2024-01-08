@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="970df627-291b-4982-a7e9-fe50e4074d8e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BingoBackend/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BingoBackend/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BingoBackend/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/BingoBackend/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClassBingo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ClassBingo/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClassBingo/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ClassBingo/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BingoBackend/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/BingoBackend/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BingoBackend/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/BingoBackend/serializers.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +109,8 @@
       <updated>1703887662819</updated>
       <workItem from="1703887695253" duration="3035000" />
       <workItem from="1704307830418" duration="3782000" />
-      <workItem from="1704316529709" duration="10231000" />
+      <workItem from="1704316529709" duration="11520000" />
+      <workItem from="1704737178257" duration="82000" />
     </task>
     <servers />
   </component>

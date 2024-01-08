@@ -17,7 +17,7 @@ class TileSerializer(serializers.ModelSerializer):
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('user_id', 'username', 'password', 'num_wins')
+        fields = ('user_id', 'username', 'password', 'num_wins', 'section_num')
 
 
 class BoardTileSerializer(serializers.ModelSerializer):
