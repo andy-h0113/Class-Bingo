@@ -7,9 +7,7 @@ from rest_framework_simplejwt.views import TokenObtainPairView
 
 from BingoBackend.models import Board, Tile, AppUser, BoardTile, BoardTileUser, Section
 from BingoBackend.serializers import BoardSerializer, TileSerializer, UserSerializer, BoardTileSerializer, \
-    BoardTileUserSerializer, SectionSerializer, RegisterSerializer, UserLoginSerializer, UserSerializer, \
-    MyTokenObtainPairSerializer
-
+    BoardTileUserSerializer, SectionSerializer, RegisterSerializer, UserLoginSerializer, UserSerializer
 from django.contrib.auth import get_user_model, login, logout
 from rest_framework.views import APIView
 from rest_framework import status, authentication
@@ -273,10 +271,6 @@ class UserRegister(APIView):
                 return JsonResponse({'user': user_serializer.data}, status=status.HTTP_201_CREATED)
         return JsonResponse({'error': 'Failed to create user'}, status=status.HTTP_400_BAD_REQUEST)
 
-
-class MyObtainTokenPairView(TokenObtainPairView):
-    permission_classes = [AllowAny]
-    serializer_class = MyTokenObtainPairSerializer
 
 
 class UserAPI(APIView):
