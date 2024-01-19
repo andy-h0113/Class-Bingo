@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataSource name="BingoDatabase">
+<dataSource name="postgres@db.nowyohpdsivzrbnepgej.supabase.co">
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.51">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <Grants>5||-9223372036854775808|c|G
+      <Grants>1||-9223372036854775808|c|G
+1||10|c|G
+1||10|C|G
+1||10|T|G
+4||-9223372036854775808|c|G
+4||10|c|G
+4||10|C|G
+4||10|T|G
+5||-9223372036854775808|c|G
 5||10|c|G
 5||16595|c|G
 5||10|C|G
@@ -11,9 +19,9 @@
 5||-9223372036854775808|T|G
 5||10|T|G
 5||16595|T|G</Grants>
-      <IntrospectionStateNumber>1066</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1062</IntrospectionStateNumber>
       <ServerVersion>15.1</ServerVersion>
-      <StartupTime>1704309958</StartupTime>
+      <StartupTime>1705556260</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -1493,89 +1501,89 @@ false posixrules
 16949||16732|C|G
 16949||16420|U|G
 16949||16732|U|G</Grants>
-      <IntrospectionStateNumber>1066</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1062</IntrospectionStateNumber>
       <ObjectId>5</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
-    <role id="3" parent="1" name="pg_database_owner">
-      <ObjectId>6171</ObjectId>
+    <role id="3" parent="1" name="anon">
+      <Config>statement_timeout=3s</Config>
+      <ObjectId>16478</ObjectId>
     </role>
-    <role id="4" parent="1" name="pg_read_all_data">
-      <ObjectId>6181</ObjectId>
+    <role id="4" parent="1" name="authenticated">
+      <Config>statement_timeout=8s</Config>
+      <ObjectId>16479</ObjectId>
     </role>
-    <role id="5" parent="1" name="pg_write_all_data">
-      <ObjectId>6182</ObjectId>
+    <role id="5" parent="1" name="authenticator">
+      <CanLogin>1</CanLogin>
+      <Config>session_preload_libraries=supautils, safeupdate
+statement_timeout=8s
+lock_timeout=8s</Config>
+      <Inherit>0</Inherit>
+      <ObjectId>16481</ObjectId>
+      <RoleGrants>16478
+16479
+16480</RoleGrants>
     </role>
-    <role id="6" parent="1" name="pg_monitor">
-      <ObjectId>3373</ObjectId>
-      <RoleGrants>3374
-3375
-3377</RoleGrants>
-    </role>
-    <role id="7" parent="1" name="pg_read_all_settings">
-      <ObjectId>3374</ObjectId>
-    </role>
-    <role id="8" parent="1" name="pg_read_all_stats">
-      <ObjectId>3375</ObjectId>
-    </role>
-    <role id="9" parent="1" name="pg_stat_scan_tables">
-      <ObjectId>3377</ObjectId>
-    </role>
-    <role id="10" parent="1" name="pg_read_server_files">
-      <ObjectId>4569</ObjectId>
-    </role>
-    <role id="11" parent="1" name="pg_write_server_files">
-      <ObjectId>4570</ObjectId>
-    </role>
-    <role id="12" parent="1" name="pg_execute_server_program">
-      <ObjectId>4571</ObjectId>
-    </role>
-    <role id="13" parent="1" name="pg_signal_backend">
-      <ObjectId>4200</ObjectId>
-    </role>
-    <role id="14" parent="1" name="pg_checkpoint">
-      <ObjectId>4544</ObjectId>
-    </role>
-    <role id="15" parent="1" name="dashboard_user">
+    <role id="6" parent="1" name="dashboard_user">
       <CreateDb>1</CreateDb>
       <CreateRole>1</CreateRole>
       <ObjectId>16595</ObjectId>
       <Replication>1</Replication>
     </role>
-    <role id="16" parent="1" name="pgsodium_keyiduser">
-      <ObjectId>16732</ObjectId>
+    <role id="7" parent="1" name="pg_checkpoint">
+      <ObjectId>4544</ObjectId>
     </role>
-    <role id="17" parent="1" name="pgsodium_keyholder">
+    <role id="8" parent="1" name="pg_database_owner">
+      <ObjectId>6171</ObjectId>
+    </role>
+    <role id="9" parent="1" name="pg_execute_server_program">
+      <ObjectId>4571</ObjectId>
+    </role>
+    <role id="10" parent="1" name="pg_monitor">
+      <ObjectId>3373</ObjectId>
+      <RoleGrants>3374
+3375
+3377</RoleGrants>
+    </role>
+    <role id="11" parent="1" name="pg_read_all_data">
+      <ObjectId>6181</ObjectId>
+    </role>
+    <role id="12" parent="1" name="pg_read_all_settings">
+      <ObjectId>3374</ObjectId>
+    </role>
+    <role id="13" parent="1" name="pg_read_all_stats">
+      <ObjectId>3375</ObjectId>
+    </role>
+    <role id="14" parent="1" name="pg_read_server_files">
+      <ObjectId>4569</ObjectId>
+    </role>
+    <role id="15" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+    </role>
+    <role id="16" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
+    </role>
+    <role id="17" parent="1" name="pg_write_all_data">
+      <ObjectId>6182</ObjectId>
+    </role>
+    <role id="18" parent="1" name="pg_write_server_files">
+      <ObjectId>4570</ObjectId>
+    </role>
+    <role id="19" parent="1" name="pgbouncer">
+      <CanLogin>1</CanLogin>
+      <ObjectId>16384</ObjectId>
+    </role>
+    <role id="20" parent="1" name="pgsodium_keyholder">
       <ObjectId>16733</ObjectId>
       <RoleGrants>16732</RoleGrants>
     </role>
-    <role id="18" parent="1" name="pgsodium_keymaker">
+    <role id="21" parent="1" name="pgsodium_keyiduser">
+      <ObjectId>16732</ObjectId>
+    </role>
+    <role id="22" parent="1" name="pgsodium_keymaker">
       <ObjectId>16734</ObjectId>
       <RoleGrants>16732
 16733</RoleGrants>
-    </role>
-    <role id="19" parent="1" name="authenticated">
-      <Config>statement_timeout=8s</Config>
-      <ObjectId>16479</ObjectId>
-    </role>
-    <role id="20" parent="1" name="anon">
-      <Config>statement_timeout=3s</Config>
-      <ObjectId>16478</ObjectId>
-    </role>
-    <role id="21" parent="1" name="service_role">
-      <BypassRls>1</BypassRls>
-      <ObjectId>16480</ObjectId>
-      <RoleGrants>16733</RoleGrants>
-    </role>
-    <role id="22" parent="1" name="supabase_admin">
-      <BypassRls>1</BypassRls>
-      <CanLogin>1</CanLogin>
-      <Config>search_path=&quot;$user&quot;, public, auth, extensions</Config>
-      <CreateDb>1</CreateDb>
-      <CreateRole>1</CreateRole>
-      <ObjectId>16420</ObjectId>
-      <Replication>1</Replication>
-      <SuperRole>1</SuperRole>
     </role>
     <role id="23" parent="1" name="postgres">
       <BypassRls>1</BypassRls>
@@ -1595,20 +1603,20 @@ false posixrules
 16734!
 3373</RoleGrants>
     </role>
-    <role id="24" parent="1" name="authenticator">
-      <CanLogin>1</CanLogin>
-      <Config>session_preload_libraries=supautils, safeupdate
-statement_timeout=8s
-lock_timeout=8s</Config>
-      <Inherit>0</Inherit>
-      <ObjectId>16481</ObjectId>
-      <RoleGrants>16478
-16479
-16480</RoleGrants>
+    <role id="24" parent="1" name="service_role">
+      <BypassRls>1</BypassRls>
+      <ObjectId>16480</ObjectId>
+      <RoleGrants>16733</RoleGrants>
     </role>
-    <role id="25" parent="1" name="pgbouncer">
+    <role id="25" parent="1" name="supabase_admin">
+      <BypassRls>1</BypassRls>
       <CanLogin>1</CanLogin>
-      <ObjectId>16384</ObjectId>
+      <Config>search_path=&quot;$user&quot;, public, auth, extensions</Config>
+      <CreateDb>1</CreateDb>
+      <CreateRole>1</CreateRole>
+      <ObjectId>16420</ObjectId>
+      <Replication>1</Replication>
+      <SuperRole>1</SuperRole>
     </role>
     <role id="26" parent="1" name="supabase_auth_admin">
       <CanLogin>1</CanLogin>
@@ -1618,24 +1626,24 @@ idle_in_transaction_session_timeout=60000</Config>
       <Inherit>0</Inherit>
       <ObjectId>16535</ObjectId>
     </role>
-    <role id="27" parent="1" name="supabase_storage_admin">
+    <role id="27" parent="1" name="supabase_read_only_user">
+      <BypassRls>1</BypassRls>
       <CanLogin>1</CanLogin>
-      <Config>search_path=storage</Config>
-      <CreateRole>1</CreateRole>
-      <Inherit>0</Inherit>
-      <ObjectId>16590</ObjectId>
-      <RoleGrants>16481</RoleGrants>
+      <ObjectId>16422</ObjectId>
+      <RoleGrants>6181</RoleGrants>
     </role>
     <role id="28" parent="1" name="supabase_replication_admin">
       <CanLogin>1</CanLogin>
       <ObjectId>16421</ObjectId>
       <Replication>1</Replication>
     </role>
-    <role id="29" parent="1" name="supabase_read_only_user">
-      <BypassRls>1</BypassRls>
+    <role id="29" parent="1" name="supabase_storage_admin">
       <CanLogin>1</CanLogin>
-      <ObjectId>16422</ObjectId>
-      <RoleGrants>6181</RoleGrants>
+      <Config>search_path=storage</Config>
+      <CreateRole>1</CreateRole>
+      <Inherit>0</Inherit>
+      <ObjectId>16590</ObjectId>
+      <RoleGrants>16481</RoleGrants>
     </role>
     <tablespace id="30" parent="1" name="pg_default">
       <ObjectId>1663</ObjectId>
@@ -4958,11 +4966,11 @@ idle_in_transaction_session_timeout=60000</Config>
     </extension>
     <extension id="269" parent="2" name="pg_stat_statements">
       <AvailableUpdates>1.4
-1.5
-1.6
-1.7
 1.8
-1.9</AvailableUpdates>
+1.9
+1.7
+1.6
+1.5</AvailableUpdates>
       <Comment>track planning and execution statistics of all SQL statements executed</Comment>
       <ObjectId>16388</ObjectId>
       <StateNumber>731</StateNumber>
@@ -5319,248 +5327,8 @@ idle_in_transaction_session_timeout=60000</Config>
     <schema id="289" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <Grants>28577||10|r|G
-28577||16478|r|G
-28577||16479|r|G
-28577||16480|r|G
-28577||10|w|G
-28577||16478|w|G
-28577||16479|w|G
-28577||16480|w|G
-28577||10|U|G
-28577||16478|U|G
-28577||16479|U|G
-28577||16480|U|G
-28578||10|d|G
-28578||16478|d|G
-28578||16479|d|G
-28578||16480|d|G
-28578||10|a|G
-28578||16478|a|G
-28578||16479|a|G
-28578||16480|a|G
-28578||10|x|G
-28578||16478|x|G
-28578||16479|x|G
-28578||16480|x|G
-28578||10|r|G
-28578||16478|r|G
-28578||16479|r|G
-28578||16480|r|G
-28578||10|t|G
-28578||16478|t|G
-28578||16479|t|G
-28578||16480|t|G
-28578||10|D|G
-28578||16478|D|G
-28578||16479|D|G
-28578||16480|D|G
-28578||10|w|G
-28578||16478|w|G
-28578||16479|w|G
-28578||16480|w|G
-28585||10|r|G
-28585||16478|r|G
-28585||16479|r|G
-28585||16480|r|G
-28585||10|w|G
-28585||16478|w|G
-28585||16479|w|G
-28585||16480|w|G
-28585||10|U|G
-28585||16478|U|G
-28585||16479|U|G
-28585||16480|U|G
-28586||10|d|G
-28586||16478|d|G
-28586||16479|d|G
-28586||16480|d|G
-28586||10|a|G
-28586||16478|a|G
-28586||16479|a|G
-28586||16480|a|G
-28586||10|x|G
-28586||16478|x|G
-28586||16479|x|G
-28586||16480|x|G
-28586||10|r|G
-28586||16478|r|G
-28586||16479|r|G
-28586||16480|r|G
-28586||10|t|G
-28586||16478|t|G
-28586||16479|t|G
-28586||16480|t|G
-28586||10|D|G
-28586||16478|D|G
-28586||16479|D|G
-28586||16480|D|G
-28586||10|w|G
-28586||16478|w|G
-28586||16479|w|G
-28586||16480|w|G
-28591||10|r|G
-28591||16478|r|G
-28591||16479|r|G
-28591||16480|r|G
-28591||10|w|G
-28591||16478|w|G
-28591||16479|w|G
-28591||16480|w|G
-28591||10|U|G
-28591||16478|U|G
-28591||16479|U|G
-28591||16480|U|G
-28592||10|d|G
-28592||16478|d|G
-28592||16479|d|G
-28592||16480|d|G
-28592||10|a|G
-28592||16478|a|G
-28592||16479|a|G
-28592||16480|a|G
-28592||10|x|G
-28592||16478|x|G
-28592||16479|x|G
-28592||16480|x|G
-28592||10|r|G
-28592||16478|r|G
-28592||16479|r|G
-28592||16480|r|G
-28592||10|t|G
-28592||16478|t|G
-28592||16479|t|G
-28592||16480|t|G
-28592||10|D|G
-28592||16478|D|G
-28592||16479|D|G
-28592||16480|D|G
-28592||10|w|G
-28592||16478|w|G
-28592||16479|w|G
-28592||16480|w|G
-28597||10|r|G
-28597||16478|r|G
-28597||16479|r|G
-28597||16480|r|G
-28597||10|w|G
-28597||16478|w|G
-28597||16479|w|G
-28597||16480|w|G
-28597||10|U|G
-28597||16478|U|G
-28597||16479|U|G
-28597||16480|U|G
-28598||10|d|G
-28598||16478|d|G
-28598||16479|d|G
-28598||16480|d|G
-28598||10|a|G
-28598||16478|a|G
-28598||16479|a|G
-28598||16480|a|G
-28598||10|x|G
-28598||16478|x|G
-28598||16479|x|G
-28598||16480|x|G
-28598||10|r|G
-28598||16478|r|G
-28598||16479|r|G
-28598||16480|r|G
-28598||10|t|G
-28598||16478|t|G
-28598||16479|t|G
-28598||16480|t|G
-28598||10|D|G
-28598||16478|D|G
-28598||16479|D|G
-28598||16480|D|G
-28598||10|w|G
-28598||16478|w|G
-28598||16479|w|G
-28598||16480|w|G
-28603||10|r|G
-28603||16478|r|G
-28603||16479|r|G
-28603||16480|r|G
-28603||10|w|G
-28603||16478|w|G
-28603||16479|w|G
-28603||16480|w|G
-28603||10|U|G
-28603||16478|U|G
-28603||16479|U|G
-28603||16480|U|G
-28604||10|d|G
-28604||16478|d|G
-28604||16479|d|G
-28604||16480|d|G
-28604||10|a|G
-28604||16478|a|G
-28604||16479|a|G
-28604||16480|a|G
-28604||10|x|G
-28604||16478|x|G
-28604||16479|x|G
-28604||16480|x|G
-28604||10|r|G
-28604||16478|r|G
-28604||16479|r|G
-28604||16480|r|G
-28604||10|t|G
-28604||16478|t|G
-28604||16479|t|G
-28604||16480|t|G
-28604||10|D|G
-28604||16478|D|G
-28604||16479|D|G
-28604||16480|D|G
-28604||10|w|G
-28604||16478|w|G
-28604||16479|w|G
-28604||16480|w|G
-28609||10|r|G
-28609||16478|r|G
-28609||16479|r|G
-28609||16480|r|G
-28609||10|w|G
-28609||16478|w|G
-28609||16479|w|G
-28609||16480|w|G
-28609||10|U|G
-28609||16478|U|G
-28609||16479|U|G
-28609||16480|U|G
-28610||10|d|G
-28610||16478|d|G
-28610||16479|d|G
-28610||16480|d|G
-28610||10|a|G
-28610||16478|a|G
-28610||16479|a|G
-28610||16480|a|G
-28610||10|x|G
-28610||16478|x|G
-28610||16479|x|G
-28610||16480|x|G
-28610||10|r|G
-28610||16478|r|G
-28610||16479|r|G
-28610||16480|r|G
-28610||10|t|G
-28610||16478|t|G
-28610||16479|t|G
-28610||16480|t|G
-28610||10|D|G
-28610||16478|D|G
-28610||16479|D|G
-28610||16480|D|G
-28610||10|w|G
-28610||16478|w|G
-28610||16479|w|G
-28610||16480|w|G</Grants>
-      <IntrospectionStateNumber>1066</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2024-01-03.21:09:53</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>1062</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2024-01-18.05:55:26</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>749</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -5640,440 +5408,5 @@ idle_in_transaction_session_timeout=60000</Config>
 SECURITY LABEL</Tags>
       <CallRoutineId>16831</CallRoutineId>
     </trigger>
-    <sequence id="302" parent="289" name="BingoBackend_board_board_id_seq">
-      <DasType>integer|0s</DasType>
-      <ObjectId>28585</ObjectId>
-      <SequenceIdentity>1</SequenceIdentity>
-      <StartValue>1</StartValue>
-      <StateNumber>1064</StateNumber>
-      <OwnerName>postgres</OwnerName>
-    </sequence>
-    <sequence id="303" parent="289" name="BingoBackend_boardtile_id_seq">
-      <DasType>bigint|0s</DasType>
-      <ObjectId>28603</ObjectId>
-      <SequenceIdentity>1</SequenceIdentity>
-      <StartValue>1</StartValue>
-      <StateNumber>1064</StateNumber>
-      <OwnerName>postgres</OwnerName>
-    </sequence>
-    <sequence id="304" parent="289" name="BingoBackend_boardtileuser_id_seq">
-      <DasType>bigint|0s</DasType>
-      <ObjectId>28609</ObjectId>
-      <SequenceIdentity>1</SequenceIdentity>
-      <StartValue>1</StartValue>
-      <StateNumber>1064</StateNumber>
-      <OwnerName>postgres</OwnerName>
-    </sequence>
-    <sequence id="305" parent="289" name="BingoBackend_tile_tile_id_seq">
-      <DasType>integer|0s</DasType>
-      <ObjectId>28591</ObjectId>
-      <SequenceIdentity>1</SequenceIdentity>
-      <StartValue>1</StartValue>
-      <StateNumber>1064</StateNumber>
-      <OwnerName>postgres</OwnerName>
-    </sequence>
-    <sequence id="306" parent="289" name="BingoBackend_user_user_id_seq">
-      <DasType>integer|0s</DasType>
-      <ObjectId>28597</ObjectId>
-      <SequenceIdentity>1</SequenceIdentity>
-      <StartValue>1</StartValue>
-      <StateNumber>1064</StateNumber>
-      <OwnerName>postgres</OwnerName>
-    </sequence>
-    <sequence id="307" parent="289" name="django_migrations_id_seq">
-      <DasType>bigint|0s</DasType>
-      <ObjectId>28577</ObjectId>
-      <SequenceIdentity>1</SequenceIdentity>
-      <StartValue>1</StartValue>
-      <StateNumber>1063</StateNumber>
-      <OwnerName>postgres</OwnerName>
-    </sequence>
-    <table id="308" parent="289" name="BingoBackend_board">
-      <ObjectId>28586</ObjectId>
-      <StateNumber>1064</StateNumber>
-      <AccessMethodId>2</AccessMethodId>
-      <OwnerName>postgres</OwnerName>
-    </table>
-    <table id="309" parent="289" name="BingoBackend_boardtile">
-      <ObjectId>28604</ObjectId>
-      <StateNumber>1064</StateNumber>
-      <AccessMethodId>2</AccessMethodId>
-      <OwnerName>postgres</OwnerName>
-    </table>
-    <table id="310" parent="289" name="BingoBackend_boardtileuser">
-      <ObjectId>28610</ObjectId>
-      <StateNumber>1064</StateNumber>
-      <AccessMethodId>2</AccessMethodId>
-      <OwnerName>postgres</OwnerName>
-    </table>
-    <table id="311" parent="289" name="BingoBackend_tile">
-      <ObjectId>28592</ObjectId>
-      <StateNumber>1064</StateNumber>
-      <AccessMethodId>2</AccessMethodId>
-      <OwnerName>postgres</OwnerName>
-    </table>
-    <table id="312" parent="289" name="BingoBackend_user">
-      <ObjectId>28598</ObjectId>
-      <StateNumber>1064</StateNumber>
-      <AccessMethodId>2</AccessMethodId>
-      <OwnerName>postgres</OwnerName>
-    </table>
-    <table id="313" parent="289" name="django_migrations">
-      <ObjectId>28578</ObjectId>
-      <StateNumber>1063</StateNumber>
-      <AccessMethodId>2</AccessMethodId>
-      <OwnerName>postgres</OwnerName>
-    </table>
-    <column id="314" parent="308" name="board_id">
-      <DasType>integer|0s</DasType>
-      <IdentityKind>by-default</IdentityKind>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StateNumber>1064</StateNumber>
-      <SequenceId>28585</SequenceId>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="315" parent="308" name="board_name">
-      <DasType>varchar(20)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StateNumber>1064</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="316" parent="308" name="dimension">
-      <DasType>integer|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StateNumber>1064</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="317" parent="308" name="active">
-      <DasType>boolean|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-      <StateNumber>1064</StateNumber>
-      <TypeId>16</TypeId>
-    </column>
-    <index id="318" parent="308" name="BingoBackend_board_pkey">
-      <ColNames>board_id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>28589</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>1064</StateNumber>
-      <Unique>1</Unique>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <key id="319" parent="308" name="BingoBackend_board_pkey">
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>28590</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>1064</StateNumber>
-      <UnderlyingIndexId>28589</UnderlyingIndexId>
-    </key>
-    <column id="320" parent="309" name="id">
-      <DasType>bigint|0s</DasType>
-      <IdentityKind>by-default</IdentityKind>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StateNumber>1064</StateNumber>
-      <SequenceId>28603</SequenceId>
-      <TypeId>20</TypeId>
-    </column>
-    <column id="321" parent="309" name="board_id_id">
-      <DasType>integer|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StateNumber>1064</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="322" parent="309" name="tile_id_id">
-      <DasType>integer|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StateNumber>1064</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <foreign-key id="323" parent="309" name="BingoBackend_boardti_board_id_id_333a0499_fk_BingoBack">
-      <ColNames>board_id_id</ColNames>
-      <Deferrable>1</Deferrable>
-      <InitiallyDeferred>1</InitiallyDeferred>
-      <ObjectId>28615</ObjectId>
-      <StateNumber>1064</StateNumber>
-      <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>28586</RefTableId>
-    </foreign-key>
-    <foreign-key id="324" parent="309" name="BingoBackend_boardti_tile_id_id_f5bee075_fk_BingoBack">
-      <ColNames>tile_id_id</ColNames>
-      <Deferrable>1</Deferrable>
-      <InitiallyDeferred>1</InitiallyDeferred>
-      <ObjectId>28620</ObjectId>
-      <StateNumber>1064</StateNumber>
-      <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>28592</RefTableId>
-    </foreign-key>
-    <index id="325" parent="309" name="BingoBackend_boardtile_pkey">
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>28607</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>1064</StateNumber>
-      <Unique>1</Unique>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <index id="326" parent="309" name="BingoBackend_boardtile_board_id_id_333a0499">
-      <ColNames>board_id_id</ColNames>
-      <ObjectId>28625</ObjectId>
-      <StateNumber>1064</StateNumber>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <index id="327" parent="309" name="BingoBackend_boardtile_tile_id_id_f5bee075">
-      <ColNames>tile_id_id</ColNames>
-      <ObjectId>28626</ObjectId>
-      <StateNumber>1064</StateNumber>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <key id="328" parent="309" name="BingoBackend_boardtile_pkey">
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>28608</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>1064</StateNumber>
-      <UnderlyingIndexId>28607</UnderlyingIndexId>
-    </key>
-    <column id="329" parent="310" name="id">
-      <DasType>bigint|0s</DasType>
-      <IdentityKind>by-default</IdentityKind>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StateNumber>1064</StateNumber>
-      <SequenceId>28609</SequenceId>
-      <TypeId>20</TypeId>
-    </column>
-    <column id="330" parent="310" name="position_row">
-      <DasType>integer|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StateNumber>1064</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="331" parent="310" name="position_col">
-      <DasType>integer|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StateNumber>1064</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="332" parent="310" name="selected">
-      <DasType>boolean|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-      <StateNumber>1064</StateNumber>
-      <TypeId>16</TypeId>
-    </column>
-    <column id="333" parent="310" name="board_id_id">
-      <DasType>integer|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StateNumber>1064</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="334" parent="310" name="tile_id_id">
-      <DasType>integer|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>6</Position>
-      <StateNumber>1064</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="335" parent="310" name="user_id_id">
-      <DasType>integer|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>7</Position>
-      <StateNumber>1064</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <foreign-key id="336" parent="310" name="BingoBackend_boardti_board_id_id_bda2eccb_fk_BingoBack">
-      <ColNames>board_id_id</ColNames>
-      <Deferrable>1</Deferrable>
-      <InitiallyDeferred>1</InitiallyDeferred>
-      <ObjectId>28627</ObjectId>
-      <StateNumber>1064</StateNumber>
-      <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>28586</RefTableId>
-    </foreign-key>
-    <foreign-key id="337" parent="310" name="BingoBackend_boardti_tile_id_id_ded091b2_fk_BingoBack">
-      <ColNames>tile_id_id</ColNames>
-      <Deferrable>1</Deferrable>
-      <InitiallyDeferred>1</InitiallyDeferred>
-      <ObjectId>28632</ObjectId>
-      <StateNumber>1064</StateNumber>
-      <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>28592</RefTableId>
-    </foreign-key>
-    <foreign-key id="338" parent="310" name="BingoBackend_boardti_user_id_id_dd65bf73_fk_BingoBack">
-      <ColNames>user_id_id</ColNames>
-      <Deferrable>1</Deferrable>
-      <InitiallyDeferred>1</InitiallyDeferred>
-      <ObjectId>28637</ObjectId>
-      <StateNumber>1064</StateNumber>
-      <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>28598</RefTableId>
-    </foreign-key>
-    <index id="339" parent="310" name="BingoBackend_boardtileuser_pkey">
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>28613</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>1064</StateNumber>
-      <Unique>1</Unique>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <index id="340" parent="310" name="BingoBackend_boardtileuser_board_id_id_bda2eccb">
-      <ColNames>board_id_id</ColNames>
-      <ObjectId>28642</ObjectId>
-      <StateNumber>1064</StateNumber>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <index id="341" parent="310" name="BingoBackend_boardtileuser_tile_id_id_ded091b2">
-      <ColNames>tile_id_id</ColNames>
-      <ObjectId>28643</ObjectId>
-      <StateNumber>1064</StateNumber>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <index id="342" parent="310" name="BingoBackend_boardtileuser_user_id_id_dd65bf73">
-      <ColNames>user_id_id</ColNames>
-      <ObjectId>28644</ObjectId>
-      <StateNumber>1064</StateNumber>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <key id="343" parent="310" name="BingoBackend_boardtileuser_pkey">
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>28614</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>1064</StateNumber>
-      <UnderlyingIndexId>28613</UnderlyingIndexId>
-    </key>
-    <column id="344" parent="311" name="tile_id">
-      <DasType>integer|0s</DasType>
-      <IdentityKind>by-default</IdentityKind>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StateNumber>1064</StateNumber>
-      <SequenceId>28591</SequenceId>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="345" parent="311" name="text">
-      <DasType>varchar(200)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StateNumber>1064</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <index id="346" parent="311" name="BingoBackend_tile_pkey">
-      <ColNames>tile_id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>28595</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>1064</StateNumber>
-      <Unique>1</Unique>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <key id="347" parent="311" name="BingoBackend_tile_pkey">
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>28596</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>1064</StateNumber>
-      <UnderlyingIndexId>28595</UnderlyingIndexId>
-    </key>
-    <column id="348" parent="312" name="user_id">
-      <DasType>integer|0s</DasType>
-      <IdentityKind>by-default</IdentityKind>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StateNumber>1064</StateNumber>
-      <SequenceId>28597</SequenceId>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="349" parent="312" name="username">
-      <DasType>varchar(20)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StateNumber>1064</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="350" parent="312" name="password">
-      <DasType>varchar(200)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StateNumber>1064</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="351" parent="312" name="num_wins">
-      <DasType>integer|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-      <StateNumber>1064</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <index id="352" parent="312" name="BingoBackend_user_pkey">
-      <ColNames>user_id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>28601</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>1064</StateNumber>
-      <Unique>1</Unique>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <key id="353" parent="312" name="BingoBackend_user_pkey">
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>28602</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>1064</StateNumber>
-      <UnderlyingIndexId>28601</UnderlyingIndexId>
-    </key>
-    <column id="354" parent="313" name="id">
-      <DasType>bigint|0s</DasType>
-      <IdentityKind>by-default</IdentityKind>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StateNumber>1063</StateNumber>
-      <SequenceId>28577</SequenceId>
-      <TypeId>20</TypeId>
-    </column>
-    <column id="355" parent="313" name="app">
-      <DasType>varchar(255)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StateNumber>1063</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="356" parent="313" name="name">
-      <DasType>varchar(255)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StateNumber>1063</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="357" parent="313" name="applied">
-      <DasType>timestamp with time zone|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-      <StateNumber>1063</StateNumber>
-      <TypeId>1184</TypeId>
-    </column>
-    <index id="358" parent="313" name="django_migrations_pkey">
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>28583</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>1063</StateNumber>
-      <Unique>1</Unique>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <key id="359" parent="313" name="django_migrations_pkey">
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>28584</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>1063</StateNumber>
-      <UnderlyingIndexId>28583</UnderlyingIndexId>
-    </key>
   </database-model>
 </dataSource>

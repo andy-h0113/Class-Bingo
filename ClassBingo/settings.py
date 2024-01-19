@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 from pathlib import Path
 import os
 from dotenv import load_dotenv
+from datetime import timedelta
 
 load_dotenv()
 
@@ -48,6 +49,7 @@ INSTALLED_APPS = [
 
 # REMOVE LATER
 CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
@@ -65,8 +67,7 @@ ROOT_URLCONF = 'ClassBingo.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -88,15 +89,32 @@ WSGI_APPLICATION = 'ClassBingo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': "django.db.backends.postgresql",
-        'HOST': "db.yoivxfdwlwrdcarbvhoa.supabase.co",
+        'HOST': "db.qzfgxuujoyzeqbyjgaqx.supabase.co",
         'NAME': "postgres",
         'USER': "postgres",
         'PASSWORD': os.getenv("POSTGRES_PASSWORD"),
-        'PORT': "5432",
-
+        'PORT': "5432"
     }
 }
 
+## User Model
+AUTH_USER_MODEL = 'BingoBackend.AppUser'
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+}
+
+#change timedelta to days=15 later
+SIMPLE_JWT = {
+    'REFRESH_TOKEN_LIFETIME': timedelta(hours=1),
+    'ROTATE_REFRESH_TOKENS': True,
+    'USER_ID_FIELD': 'user_id'
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators

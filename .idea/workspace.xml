@@ -5,14 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="970df627-291b-4982-a7e9-fe50e4074d8e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/45dada8f-7241-4c09-b9cc-76d548f19753.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/45dada8f-7241-4c09-b9cc-76d548f19753/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/45dada8f-7241-4c09-b9cc-76d548f19753/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/45dada8f-7241-4c09-b9cc-76d548f19753/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/45dada8f-7241-4c09-b9cc-76d548f19753/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BingoBackend/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/BingoBackend/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BingoBackend/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BingoBackend/migrations/0002_user_section_num.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/BingoBackend/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/BingoBackend/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BingoBackend/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/BingoBackend/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BingoBackend/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/BingoBackend/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BingoBackend/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/BingoBackend/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassBingo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ClassBingo/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -34,6 +50,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -52,6 +71,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -110,7 +130,17 @@
       <workItem from="1703887695253" duration="3035000" />
       <workItem from="1704307830418" duration="3782000" />
       <workItem from="1704316529709" duration="11520000" />
-      <workItem from="1704737178257" duration="82000" />
+      <workItem from="1704737178257" duration="6138000" />
+      <workItem from="1704834378527" duration="100000" />
+      <workItem from="1704834504202" duration="7172000" />
+      <workItem from="1704920611392" duration="6798000" />
+      <workItem from="1705082921170" duration="92000" />
+      <workItem from="1705083028117" duration="702000" />
+      <workItem from="1705083855633" duration="5619000" />
+      <workItem from="1705181396857" duration="1016000" />
+      <workItem from="1705182622134" duration="4237000" />
+      <workItem from="1705187474665" duration="741000" />
+      <workItem from="1705525882423" duration="43289000" />
     </task>
     <servers />
   </component>

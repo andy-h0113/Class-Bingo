@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="PY-233.13135.95">
-    <data-source name="BingoDatabase" uuid="45dada8f-7241-4c09-b9cc-76d548f19753">
+    <data-source name="postgres@db.qzfgxuujoyzeqbyjgaqx.supabase.co" uuid="641c9731-739f-4e91-a501-37aad8e9dc94">
       <database-info product="PostgreSQL" version="15.1 (Ubuntu 15.1-1.pgdg20.04+1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.6.0" dbms="POSTGRES" exact-version="15.1" exact-driver-version="42.6">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
