@@ -3,6 +3,7 @@ from rest_framework.parsers import JSONParser
 from django.http.response import JsonResponse
 import random
 
+from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework_simplejwt.views import TokenObtainPairView
 
 from BingoBackend.models import Board, Tile, AppUser, BoardTile, BoardTileUser, Section
@@ -211,6 +212,8 @@ class PopulateUserBoardsNewBoard(APIView):
                         "position_col": y,
                         "selected": False
                     }
+                    if x == 2 and y == 2:
+                        board_tile_user['selected'] = True
                     board_tile_user_serializer = BoardTileUserSerializer(data=board_tile_user)
                     if board_tile_user_serializer.is_valid():
                         board_tile_user_serializer.save()
@@ -272,6 +275,18 @@ class UserRegister(APIView):
         return JsonResponse({'error': 'Failed to create user'}, status=status.HTTP_400_BAD_REQUEST)
 
 
+class UserLogout(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request):
+        try:
+            refresh_token = request.data["refresh_token"]
+            token = RefreshToken(refresh_token)
+            token.blacklist()
+
+            return JsonResponse("Blacklisted", safe=False, status=status.HTTP_205_RESET_CONTENT)
+        except Exception as e:
+            return JsonResponse("Failed to blacklist", safe=False, status=status.HTTP_400_BAD_REQUEST)
 
 class UserAPI(APIView):
     permission_classes = [IsAuthenticated]

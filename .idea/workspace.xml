@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="970df627-291b-4982-a7e9-fe50e4074d8e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BingoBackend/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/BingoBackend/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BingoBackend/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/BingoBackend/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BingoBackend/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/BingoBackend/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClassBingo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ClassBingo/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +127,7 @@
       <workItem from="1705181396857" duration="1016000" />
       <workItem from="1705182622134" duration="4237000" />
       <workItem from="1705187474665" duration="741000" />
-      <workItem from="1705525882423" duration="44152000" />
+      <workItem from="1705525882423" duration="45911000" />
     </task>
     <servers />
   </component>
