@@ -26,7 +26,7 @@ class BoardAPI(APIView):
         else:
             board = Board.objects.all()
         board_serializer = BoardSerializer(board, many=True)
-        return JsonResponse(board_serializer.data, safe=False)
+        return JsonResponse(board_serializer.data, safe=False, status=status.HTTP_200_OK)
 
     def post(self, request):
         board_data = JSONParser().parse(request)
@@ -46,13 +46,13 @@ class BoardAPI(APIView):
         board_serializer = BoardSerializer(board, data=board_data)
         if board_serializer.is_valid():
             board_serializer.save()
-            return JsonResponse("Updated Successfully", safe=False)
-        return JsonResponse("Failed to Update", safe=False)
+            return JsonResponse("Updated Successfully", safe=False, status=status.HTTP_200_OK)
+        return JsonResponse("Failed to Update", safe=False, status=status.HTTP_400_BAD_REQUEST)
 
     def delete(self, request, id):
         board = Board.objects.get(board_id=id)
         board.delete()
-        return JsonResponse("Deleted Successfully", safe=False)
+        return JsonResponse("Deleted Successfully", safe=False, status=status.HTTP_200_OK)
 
 
 class TileAPI(APIView):
@@ -61,15 +61,15 @@ class TileAPI(APIView):
     def get(self, request, id=0):
         tile = Tile.objects.all()
         tile_serializer = TileSerializer(tile, many=True)
-        return JsonResponse(tile_serializer.data, safe=False)
+        return JsonResponse(tile_serializer.data, safe=False, status=status.HTTP_200_OK)
 
     def post(self, request):
         tile_data = JSONParser().parse(request)
         tile_serializer = TileSerializer(data=tile_data)
         if tile_serializer.is_valid():
             tile_serializer.save()
-            return JsonResponse("Added Successfully", safe=False)
-        return JsonResponse("Failed to Add", safe=False)
+            return JsonResponse("Added Successfully", safe=False, status=status.HTTP_200_OK)
+        return JsonResponse("Failed to Add", safe=False, status=status.HTTP_400_BAD_REQUEST)
 
     def put(self, request):
         tile_data = JSONParser().parse(request)
@@ -77,13 +77,13 @@ class TileAPI(APIView):
         tile_serializer = TileSerializer(tile, data=tile_data)
         if tile_serializer.is_valid():
             tile_serializer.save()
-            return JsonResponse("Updated Successfully", safe=False)
-        return JsonResponse("Failed to Update", safe=False)
+            return JsonResponse("Updated Successfully", safe=False, status=status.HTTP_200_OK)
+        return JsonResponse("Failed to Update", safe=False, status=status.HTTP_400_BAD_REQUEST)
 
     def delete(self, request, id):
         tile = Tile.objects.get(tile_id=id)
         tile.delete()
-        return JsonResponse("Deleted Successfully", safe=False)
+        return JsonResponse("Deleted Successfully", safe=False, status=status.HTTP_200_OK)
 
 
 class TileMultipleAPI(APIView):
@@ -96,8 +96,8 @@ class TileMultipleAPI(APIView):
             if tile_serializer.is_valid():
                 tile_serializer.save()
             else:
-                return JsonResponse("Failed to Add", safe=False)
-        return JsonResponse("Added Successfully", safe=False)
+                return JsonResponse("Failed to Add", safe=False, status=status.HTTP_200_OK)
+        return JsonResponse("Added Successfully", safe=False, status=status.HTTP_400_BAD_REQUEST)
 
 
 class SectionAPI(APIView):
@@ -109,20 +109,20 @@ class SectionAPI(APIView):
         else:
             section = Section.objects.all()
         section_serializer = SectionSerializer(section, many=True)
-        return JsonResponse(section_serializer.data, safe=False)
+        return JsonResponse(section_serializer.data, safe=False, status=status.HTTP_200_OK)
 
     def post(self, request):
         section_data = JSONParser().parse(request)
         section_serializer = SectionSerializer(data=section_data)
         if section_serializer.is_valid():
             section_serializer.save()
-            return JsonResponse("Added Successfully", safe=False)
-        return JsonResponse("Failed to Add", safe=False)
+            return JsonResponse("Added Successfully", safe=False, status=status.HTTP_200_OK)
+        return JsonResponse("Failed to Add", safe=False, status=status.HTTP_400_BAD_REQUEST)
 
     def delete(self, request, id=0):
         section = Section.objects.get(section_id=id)
         section.delete()
-        return JsonResponse("Deleted Successfully", safe=False)
+        return JsonResponse("Deleted Successfully", safe=False, status=status.HTTP_200_OK)
 
 
 class BoardTileAPI(APIView):
@@ -134,7 +134,7 @@ class BoardTileAPI(APIView):
         else:
             board_tile = BoardTile.objects.all()
         board_tile_serializer = BoardTileSerializer(board_tile, many=True)
-        return JsonResponse(board_tile_serializer.data, safe=False)
+        return JsonResponse(board_tile_serializer.data, safe=False, status=status.HTTP_200_OK)
 
     def post(self, request):
         board_tile_data = JSONParser().parse(request)
@@ -150,13 +150,13 @@ class BoardTileAPI(APIView):
         board_tile_serializer = BoardTileSerializer(board_tile, data=board_tile_data)
         if board_tile_serializer.is_valid():
             board_tile_serializer.save()
-            return JsonResponse("Updated Successfully", safe=False)
-        return JsonResponse("Failed to Update", safe=False)
+            return JsonResponse("Updated Successfully", safe=False, status=status.HTTP_200_OK)
+        return JsonResponse("Failed to Update", safe=False, status=status.HTTP_400_BAD_REQUEST)
 
     def delete(self, request, board_id=0, tile_id=0):
         board_tile = BoardTile.objects.get(tile_id=tile_id, board_id=board_id)
         board_tile.delete()
-        return JsonResponse("Deleted Successfully", safe=False)
+        return JsonResponse("Deleted Successfully", safe=False, status=status.HTTP_200_OK)
 
 
 class BoardTileUserApi(APIView):
@@ -302,5 +302,5 @@ class UserSectionAPI(APIView):
     def get(self, request, section_id=0):
         users = UserModel.objects.filter(section_id=section_id).order_by("num_wins").reverse()
         users_serializer = UserSerializer(users, many=True)
-        return JsonResponse(users_serializer.data, safe=False)
+        return JsonResponse(users_serializer.data, safe=False, status=status.HTTP_200_OK)
 
