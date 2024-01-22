@@ -22,7 +22,7 @@ urlpatterns = [
     path('user/<int:user_id>/', views.UserAPI.as_view(), name='user'),
     path('user/section/<int:section_id>/', views.UserSectionAPI.as_view(), name='user_section'),
     path('login/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('login/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('register/', views.UserRegister.as_view(), name='register'),
     path('logout/', views.UserLogout.as_view(), name='logout'),
 ]

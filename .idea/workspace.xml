@@ -5,34 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="970df627-291b-4982-a7e9-fe50e4074d8e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2550d9ee-f551-4a41-90b5-105ea69c0b94.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2550d9ee-f551-4a41-90b5-105ea69c0b94/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2550d9ee-f551-4a41-90b5-105ea69c0b94/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2550d9ee-f551-4a41-90b5-105ea69c0b94/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2550d9ee-f551-4a41-90b5-105ea69c0b94/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/641c9731-739f-4e91-a501-37aad8e9dc94.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/641c9731-739f-4e91-a501-37aad8e9dc94.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6f265e72-d3d8-467c-ab10-56408147d80f.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6f265e72-d3d8-467c-ab10-56408147d80f/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6f265e72-d3d8-467c-ab10-56408147d80f/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6f265e72-d3d8-467c-ab10-56408147d80f/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6f265e72-d3d8-467c-ab10-56408147d80f/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7390027e-bbe6-4129-9f2a-c71f5b9c20f8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7390027e-bbe6-4129-9f2a-c71f5b9c20f8/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7390027e-bbe6-4129-9f2a-c71f5b9c20f8/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7390027e-bbe6-4129-9f2a-c71f5b9c20f8/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7390027e-bbe6-4129-9f2a-c71f5b9c20f8/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/76080174-c0e3-48ae-9848-2c28cd6fe623.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/76080174-c0e3-48ae-9848-2c28cd6fe623/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/76080174-c0e3-48ae-9848-2c28cd6fe623/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/76080174-c0e3-48ae-9848-2c28cd6fe623/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/76080174-c0e3-48ae-9848-2c28cd6fe623/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a9047263-7c05-41d0-bbb8-49b58b33423d.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a9047263-7c05-41d0-bbb8-49b58b33423d/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a9047263-7c05-41d0-bbb8-49b58b33423d/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a9047263-7c05-41d0-bbb8-49b58b33423d/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a9047263-7c05-41d0-bbb8-49b58b33423d/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BingoBackend/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/BingoBackend/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BingoBackend/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/BingoBackend/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +127,7 @@
       <workItem from="1705182622134" duration="4237000" />
       <workItem from="1705187474665" duration="741000" />
       <workItem from="1705525882423" duration="45911000" />
-      <workItem from="1705871376330" duration="1691000" />
+      <workItem from="1705871376330" duration="2397000" />
     </task>
     <servers />
   </component>
