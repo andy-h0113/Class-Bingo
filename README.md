@@ -16,4 +16,6 @@ Includes endpoints for customizing:
 
 **Status: Deprecated**
 
-Supabase was used to host the database, but their connection method was changed from IPv4 to IPv6, and stopped support of direct database connection. 
+Supabase was used to host the database, but their connection method was changed from IPv4 to IPv6, and stopped support of direct database connection.
+
+Frontend Link: https://github.com/andy-h0113/class-bingo-frontend
